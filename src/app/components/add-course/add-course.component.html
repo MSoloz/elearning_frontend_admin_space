@@ -1,0 +1,42 @@
+<body>
+
+    <mat-card >
+    
+        <mat-card-content >
+      
+          <h1>Ajouter Cour</h1>
+        
+        <form [formGroup]="courseForm" (ngSubmit)="addCourse()" >
+        
+          <mat-form-field appearance="outline">
+      
+      
+            <mat-label>Name</mat-label>
+        
+             <input matInput  placeholder="Name" formControlName="name">
+        
+
+          </mat-form-field>  
+    
+         <mat-form-field appearance="outline">
+        
+            <mat-label>Description</mat-label>
+      
+            <textarea matInput name ="description" placeholder="Description" formControlName="description" ></textarea>
+        
+            
+         </mat-form-field> 
+
+         <input type="file"  name="file1" (change)="getFile1($event)"/>
+
+         <input type="file"  name="file2" (change)="getFile2($event)"/>
+
+
+        <button mat-raised-button color="primary" type="submit" >Add</button>
+               
+        </form>
+        
+        </mat-card-content>
+      </mat-card>
+      
+</body>

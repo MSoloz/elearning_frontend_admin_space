@@ -1,0 +1,19 @@
+.course-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+  }
+  
+  .course-details {
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .course-details video {
+    width: 100%; /* Make the video fill the available width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 80vh; /* Limit the video height to 80% of the viewport height */
+  }
+  
