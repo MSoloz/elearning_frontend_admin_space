@@ -1,1 +1,23 @@
-<p>edit-topic works!</p>
+<body>
+    <mat-card>
+      <mat-card-content>
+        <h1>Modifier Sujet de question</h1>
+        <form (ngSubmit)="add()">
+          <mat-form-field appearance="outline">
+            <mat-label>Titre</mat-label>
+            <input matInput placeholder="Titre" [(ngModel)]="topic.title" name="title">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Sous Titre</mat-label>
+            <textarea matInput placeholder="Sous Titre" [(ngModel)]="topic.degree" name="degree"></textarea>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Description" [(ngModel)]="topic.subject" name="subject"></textarea>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Add</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </body>
+  

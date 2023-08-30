@@ -34,9 +34,9 @@
   
             <td><button  mat-raised-button color="primary"  routerLink="">Details</button></td>
   
-            <td><button  mat-raised-button color="primary"  routerLink="">Edit</button></td>
+            <td><button  mat-raised-button color="primary"  routerLink="/ELearning/topic/edit/{{topic.id}}">Edit</button></td>
   
-            <td><button mat-raised-button color="primary" >Delete</button></td>
+            <td><button mat-raised-button color="primary" (click)="removeTopic(topic.id)">Delete</button></td>
            
         </tr>
        

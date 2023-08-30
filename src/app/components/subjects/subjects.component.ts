@@ -35,4 +35,12 @@ export class SubjectsComponent {
     this.router.navigate(['ELearning/subject/add']);
   }
 
+  
+  removeSubject(id:any){
+
+    this.service.deleteSubjectById(id).subscribe(res=>this.ngOnInit());
+
+
+  }
+
 }

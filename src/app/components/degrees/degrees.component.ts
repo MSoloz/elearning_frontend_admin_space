@@ -32,5 +32,11 @@ export class DegreesComponent implements OnInit{
     this.router.navigate(['ELearning/degree/add']);
   }
 
+  removeDegree(id:any){
+
+    this.service.deleteDegreeById(id).subscribe(res=>this.ngOnInit());
+
+
+  }
 
 }

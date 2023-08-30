@@ -31,4 +31,12 @@ export class TopicsComponent implements OnInit{
 
   }
 
+   
+  removeTopic(id:any){
+
+    this.service.deleteTopicById(id).subscribe(res=>this.ngOnInit());
+
+
+  }
+
 }

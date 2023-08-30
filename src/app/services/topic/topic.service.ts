@@ -35,10 +35,10 @@ export class TopicService {
  }    
 
  
- updateTopic(id:any,data:any){
+ updateTopic(id:number,data:any){
 
 
-  return this.http.put(`${this.apiServerUrl}/university/update/`+id, data);
+  return this.http.put(`${this.apiServerUrl}/topic/`+id+'/update/', data);
 
   
  }    
@@ -46,7 +46,7 @@ export class TopicService {
 
  deleteTopicById(id:any){
 
-  return this.http.delete(`${this.apiServerUrl}/university/delete/`+id);
+  return this.http.delete(`${this.apiServerUrl}/topic/`+id+`/delete/`);
 
 }
 

@@ -35,19 +35,19 @@ export class DegreeService {
  }    
 
  
- updateCourse(id:any,data:any){
+ updateDegree(id:any,data:any){
 
 
-  return this.http.put(`${this.apiServerUrl}/university/update/`+id, data);
+  return this.http.put<Degree>(`${this.apiServerUrl}/degree/`+id+`/update/`, data);
 
   
  }    
 
 
- deleteCourseById(id:any){
+ deleteDegreeById(id:any){
 
 
-  return this.http.delete(`${this.apiServerUrl}/university/delete/`+id);
+  return this.http.delete(`${this.apiServerUrl}/degree/`+id+`/delete/`);
 
 
 }

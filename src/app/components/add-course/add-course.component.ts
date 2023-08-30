@@ -24,8 +24,8 @@ export class AddCourseComponent {
    this.courseForm = new FormGroup({
      name: new FormControl(''),
      description: new FormControl(''),
-     file1 : new FormControl(''),
-     file2 : new FormControl(''),
+     image_path : new FormControl(''),
+     video_path : new FormControl(''),
      
    });
 
@@ -36,7 +36,7 @@ export class AddCourseComponent {
 
    this.file1 = event.target.files[0];
 
-   this.courseForm.get('file1')?.setValue(this.file1);
+   this.courseForm.get('image_path')?.setValue(this.file1);
      
  }
 
@@ -44,7 +44,7 @@ export class AddCourseComponent {
 
   this.file2 = event.target.files[0];
 
-  this.courseForm.get('file2')?.setValue(this.file2);
+  this.courseForm.get('video_path')?.setValue(this.file2);
     
 }
 
@@ -57,9 +57,9 @@ export class AddCourseComponent {
    console.log(this.courseForm.get('name')?.value)
 
    formData.append('name',this.courseForm.get('name')?.value);
-   formData.append('country',this.courseForm.get('country')?.value);
-   formData.append('file',this.courseForm.get('file')?.value);
-   formData.append('file',this.courseForm.get('file')?.value);
+   formData.append('description',this.courseForm.get('description')?.value);
+   formData.append('image_path',this.courseForm.get('image_path')?.value);
+   formData.append('video_path',this.courseForm.get('video_path')?.value);
    
    console.log(this.courseForm.value);
 
@@ -67,7 +67,7 @@ export class AddCourseComponent {
 
      if(res!=null){
 
-       this.router.navigate(['/MoveOnEsprit/universities']);
+       this.router.navigate(['/ELearning/courses']);
 
      }else {
 
